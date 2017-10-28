@@ -8,7 +8,8 @@ void setup()
   ammunition1 = new Ammunition();
   fuel1 = new Fuel();
   buttons1 = new Buttons();
-  shooter1 = new Shooter();
+  //shooter1 = new Shooter();
+  aimer1 = new Aimer();
 }
 
 Ship ship1;
@@ -18,7 +19,8 @@ Compass compass1;
 Ammunition ammunition1;
 Fuel fuel1;
 Buttons buttons1;
-Shooter shooter1;
+//Shooter shooter1;
+Aimer aimer1;
 
 void draw()
 {
@@ -31,12 +33,17 @@ void draw()
   speedometer1.render();
   
   compass1.render();
+  compass1.key();
   
   ammunition1.render();
   
   fuel1.render();
   
   buttons1.render();
+  buttons1.key();
   
-  shooter1.render();
+ // shooter1.render();
+  
+  aimer1.render();
+  aimer1.key();
 }

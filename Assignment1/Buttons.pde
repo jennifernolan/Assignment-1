@@ -53,4 +53,52 @@ class Buttons
     fill(85, 107, 47);
     arc((width / 6) * 1.7, (height / 6) * 5.35, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
   }
+  
+  void key()
+  {
+    if(keyPressed)
+    {
+      if(key == ' ')
+      {
+        redraw();
+        fill(0);
+        rect(shootx, shooty, width / 7.5, height / 25, 7);
+        fill(255);
+        textAlign(CENTER);
+        text("Shoot", (width / 6) * 2.95, (height / 6) * 3.95);
+      }
+    }
+    
+    if(keyPressed)
+    {
+      if(key == CODED)
+      {
+        if(keyCode == RIGHT)
+        {
+          redraw();
+          fill(0);
+          triangle(x + 20, y + 20, x + 35, y + 30, x + 20, y + 40);
+        }
+        if(keyCode == LEFT)
+        {
+          redraw();
+          fill(0);
+          triangle(x  - 20, y + 20, x - 35, y + 30, x - 20, y + 40);
+        }
+        if(keyCode == UP) 
+        {
+          redraw();
+          fill(0);
+          triangle(x, y, x + 10, y + 15, x - 10, y + 15);
+        }
+        if(keyCode == DOWN)
+        {
+         redraw();
+         fill(0);
+         triangle(x, y + 60, x + 10, y + 45, x - 10, y + 45);
+        }
+      }
+    }
+  }
+  
 }
