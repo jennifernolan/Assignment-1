@@ -1,11 +1,14 @@
 class Ammunition
 {
   float x, y;
+  float linex, liney;
   
   Ammunition()
   {
-    this.x = (width / 6) * 4.5;
+    this.x = (width / 6) * 4.4;
     this.y = (height / 6) * 4.5;
+    this.linex = (width / 6) * 4.4;
+    this.liney = (height / 6) * 4.5;
   }
   
   void render()
@@ -23,11 +26,22 @@ class Ammunition
     
     textAlign(CENTER);
     text("Ammunition", x + 5, y + 115);
-    /*
-    line(x, y, x, y + 100);
-    line(x, y + 100, x + 15, y + 100);
-    line(x + 15, y + 100, x + 15, y);
-    line(x + 15, y, x, y);
-    fill(0);*/
+    
+    stroke(255, 0, 0);
+    line(linex, liney, linex + 15, liney);
+    textAlign(LEFT);
+    text("Level", linex + 17, liney);
+  
+    if(keyPressed)
+    {
+       if(key == ' ')
+      {
+        if(liney < y + 100)
+        {
+          liney = liney + 0.1;
+        }
+      }
+    }
   }
+  
 }

@@ -26,12 +26,6 @@ class Fuel
     
     textAlign(CENTER);
     text("Fuel", x + 10, y + 115);
-    /*
-    line(x, y, x, y + 100);
-    line(x, y + 100, x + 15, y + 100);
-    line(x + 15, y + 100, x + 15, y);
-    line(x + 15, y, x, y);
-    fill(0);*/
     
     stroke(255, 0, 0);
     line(linex, liney, linex + 15, liney);
@@ -44,7 +38,7 @@ class Fuel
      {
        if(liney < y + 100)
        {
-         liney = liney + 1;
+         liney = liney + 0.1;
        }
      }
     }
