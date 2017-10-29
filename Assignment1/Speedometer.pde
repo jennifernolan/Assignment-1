@@ -32,7 +32,7 @@ class Speedometer
     stroke(255, 0, 0);
     fill(0);
     ellipse(cx, cy, radius /2, radius / 2);
-    line(cx, cy, lineX, lineY);
+    //line(cx, cy, lineX, lineY);
     textAlign(CENTER);
     text("Speed", (width / 6) * 1.7, (height / 6) * 4.8);
     

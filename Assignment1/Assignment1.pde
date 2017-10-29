@@ -2,7 +2,7 @@ void setup()
 {
   size(500, 500);
   ship1 = new Ship();
-  radar1 = new Radar(100, 0.5, color(0, 255, 0));
+  radar1 = new Radar(140, 0.5, color(0, 255, 0));
   speedometer1 = new Speedometer(140, 0.5);
   compass1 = new Compass(100, 0.5);
   ammunition1 = new Ammunition();

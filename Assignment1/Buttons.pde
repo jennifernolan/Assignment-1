@@ -52,7 +52,9 @@ class Buttons
     arc(wheelx, wheely, width * 0.14, height * 0.14, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
     fill(85, 107, 47);
     arc((width / 6) * 1.7, (height / 6) * 5.35, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+
   }
+    
   
   void key()
   {
