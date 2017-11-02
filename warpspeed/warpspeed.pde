@@ -1,0 +1,73 @@
+void setup()
+{
+  size(500, 500);
+  for(int i = 0; i < stars.length; i++)
+  {
+    stars[i] = new Star();
+  }
+  ship1 = new Ship();
+  aimer1 = new Aimer();
+  ammunition1 = new Ammunition();
+  buttons1 = new Buttons();
+  compass1 = new Compass(100, 0.1);
+  fuel1 = new Fuel();
+  radar1 = new Radar(140, 0.5, color(0, 255, 0));
+  speedometer1 = new Speedometer(140, 0.5);
+}
+
+Star[] stars = new Star[800];
+float speed;
+Ship ship1;
+Aimer aimer1;
+Ammunition ammunition1;
+Buttons buttons1;
+Compass compass1;
+Fuel fuel1;
+Radar radar1;
+Speedometer speedometer1;
+
+void draw()
+{
+  //speed = map(mouseX, 0, width, 0, 20);
+  if(keyPressed)
+  {
+    if(key == 'a' || key == 'A')
+    {
+      speed = 50;
+    }
+    else
+    {
+      speed = 0;
+    }
+  }
+  background(0);
+  translate(width / 2, height / 2);
+  for(int i = 0; i < stars.length; i++)
+  {
+    stars[i].update();
+    stars[i].show();
+  }
+  
+  ship1.render();
+  ship1.keyPressed();
+  
+  aimer1.render();
+  aimer1.key();
+  
+  ammunition1.render();
+  
+  buttons1.render();
+  buttons1.key();
+  buttons1.keyPressed();
+  
+  compass1.render();
+  compass1.update();
+  
+  fuel1.render();
+  
+  radar1.render();
+  radar1.update();
+  
+  speedometer1.render();
+  speedometer1.update();
+}
