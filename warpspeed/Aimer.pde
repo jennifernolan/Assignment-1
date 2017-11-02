@@ -17,21 +17,21 @@ class Aimer
     }
   }
   
-    void key()
+  void key()
   {
     if(keyPressed)
     {
       if(key == CODED)
       {
-        if(keyCode == RIGHT && x < width)
+        if(keyCode == RIGHT && x < width / 2)
         {
           x ++;
         }
-        if(keyCode == LEFT && x > -width)
+        if(keyCode == LEFT && x > -width / 2)
         {
           x --;
         }
-        if(keyCode == UP && y > -height) 
+        if(keyCode == UP && y > -height / 2) 
         {
           y --;
         }

@@ -52,8 +52,8 @@ class Compass
     text("S", sx, sy);
     textAlign(LEFT);
     text("W", wx, wy);
-    
-    if(keyPressed)
+  
+    if (keyPressed)
     {
       if(key == CODED)
       {
@@ -80,7 +80,5 @@ class Compass
         }
       }
     }
-    
   }
-  
 }

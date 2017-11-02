@@ -4,7 +4,7 @@ class Speedometer
   float lineX, lineY;
   float x, y;
   float radius;
-  float theta;
+  float theta, theta2;
   float frequency;
   float speed;
   
@@ -12,19 +12,21 @@ class Speedometer
   {
    this.cx = -width + 400;
    this.cy = (height / 8) * 1.7;
-   this.lineX = (width / 6) * 1.7 - 31;
-   this.lineY = (height / 6) * 4.2 + 15;
+   //this.lineX = (width / 6) * 1.7 - 31;
+   //this.lineY = (height / 6) * 4.2 + 15;
    this.radius = radius;
    this.x = -width + 400;
    this.y = (height / 8) * 1.7;
    this.frequency = frequency;
    this.speed = (TWO_PI / 60.0) * frequency;
    this.theta = 0;
+   this.theta2 = 0;
   }
   
   void update()
   {
     theta += speed;
+    theta2 += speed / 2;
   }
   
   void render()
@@ -47,9 +49,10 @@ class Speedometer
     line(x - radius / 4 + 56, y - 11, x + 30, y - 15);
     line(x + radius / 4, y, x + 25, y);
     line(x - radius / 4 + 58, y + 11, x + 31, y + 15);
-    
-    if(keyPressed)
-    {
+  }
+  
+  void keyPressed()
+  {
        if(key == 'a' || key == 'A')
        {
          int trailLength = 1;
@@ -61,8 +64,6 @@ class Speedometer
           line(cx, cy, lineX, lineY);
          }
        }
-    }
-    
   }
  
 }

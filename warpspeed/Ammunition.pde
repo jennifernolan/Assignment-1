@@ -34,14 +34,23 @@ class Ammunition
   
     if(keyPressed)
     {
-       if(key == ' ')
+      if(key == ' ')
       {
         if(liney < y + 100)
         {
-          liney = liney + 0.1;
+          liney = liney + 0.10;
         }
       }
     }
+    
   }
+    void keyReleased()
+    {
+        if(liney > y)
+        {
+          liney = liney - 0.05;
+        }
+      
+    }
   
 }

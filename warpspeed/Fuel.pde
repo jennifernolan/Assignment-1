@@ -31,17 +31,26 @@ class Fuel
     line(linex, liney, linex + 15, liney);
     textAlign(LEFT);
     text("Level", linex + 17, liney);
-    
-    if(keyPressed)
+  }
+  
+  
+    void keyPressed()
     {
      if(key == 'a' || key == 'A')
      {
        if(liney < y + 100)
        {
-         liney = liney + 0.1;
+         liney = liney + 0.10;
+       }
+     }
+     if(key == 's' || key == 'S')
+     {
+       if(liney > y)
+       {
+         liney = liney - 0.05;
        }
      }
     }
-  }
+  
   
 }

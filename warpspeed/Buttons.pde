@@ -99,19 +99,6 @@ class Buttons
         }
       }
     }
-    
-    if(keyPressed)
-    {
-      if(key == 'a' || key == 'A')
-      {
-        redraw();
-        fill(0);
-        rect(accx, accy, width / 7.5, height / 25);
-        fill(255);
-        textAlign(CENTER);
-        text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.25);
-      }
-    }
   }
     
   void keyPressed()
@@ -126,7 +113,7 @@ class Buttons
         textAlign(CENTER);
         text("Power : On", -width + 485, (height / 8) * 3.8);
         fill(85, 107, 47);
-       arc(-width + 350, (height / 8) * 3.05, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+        arc(-width + 350, (height / 8) * 3.05, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
       }
       if(key == 'f' || key == 'F')
       {
@@ -138,6 +125,27 @@ class Buttons
         text("Power : Off", -width + 485, (height / 8) * 3.8);
         fill(0, 51, 0);
         arc(-width + 350, (height / 8) * 3.05, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+      }
+      
+      if(key == 'a' || key == 'A')
+      {
+        redraw();
+        fill(0);
+        stroke(255);
+        rect(accx, accy, width / 7.5, height / 25);
+        fill(255);
+        textAlign(CENTER);
+        text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.25);
+      }
+      if(key == 's' || key == 'S')
+      {
+        redraw();
+        noFill();
+        stroke(0);
+        rect(accx, accy, width / 7.5, height / 25);
+        fill(0);
+        textAlign(CENTER);
+        text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.25);
       }
     }
     

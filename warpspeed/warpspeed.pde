@@ -15,7 +15,7 @@ void setup()
   speedometer1 = new Speedometer(140, 0.5);
 }
 
-Star[] stars = new Star[800];
+Star[] stars = new Star[1000];
 float speed;
 Ship ship1;
 Aimer aimer1;
@@ -35,7 +35,7 @@ void draw()
     {
       speed = 50;
     }
-    else
+    if(key == 's' || key == 'S')
     {
       speed = 0;
     }
@@ -55,6 +55,7 @@ void draw()
   aimer1.key();
   
   ammunition1.render();
+  ammunition1.keyReleased();
   
   buttons1.render();
   buttons1.key();
@@ -64,10 +65,12 @@ void draw()
   compass1.update();
   
   fuel1.render();
+  fuel1.keyPressed();
   
   radar1.render();
   radar1.update();
   
   speedometer1.render();
   speedometer1.update();
+  speedometer1.keyPressed();
 }
