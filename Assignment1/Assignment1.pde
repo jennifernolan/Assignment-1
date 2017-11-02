@@ -4,12 +4,16 @@ void setup()
   ship1 = new Ship();
   radar1 = new Radar(140, 0.5, color(0, 255, 0));
   speedometer1 = new Speedometer(140, 0.5);
-  compass1 = new Compass(100, 0.5);
+  compass1 = new Compass(100, 0.1);
   ammunition1 = new Ammunition();
   fuel1 = new Fuel();
   buttons1 = new Buttons();
   //shooter1 = new Shooter();
   aimer1 = new Aimer();
+  for(int i = 0; i < stars.length; i++)
+  {
+    stars[i] = new Star();
+  }
 }
 
 Ship ship1;
@@ -22,9 +26,29 @@ Buttons buttons1;
 //Shooter shooter1;
 Aimer aimer1;
 
+Star[] stars = new Star[1000];
+float speed;
+
 void draw()
 {
+  if(keyPressed)
+  {
+    if(key == 'a' || key == 'A')
+    {
+      speed = 50;
+    }
+    else
+    {
+      speed = 0;
+    }
+  }
   background(0);
+  //translate(width / 2, height / 2);
+  for(int i = 0; i < stars.length; i++)
+  {
+    stars[i].update();
+    stars[i].show();
+  }
 
   ship1.render();
   ship1.keyPressed();
@@ -49,5 +73,5 @@ void draw()
  // shooter1.render();
   
   aimer1.render();
-  aimer1.key();
+  aimer1.key();  
 }

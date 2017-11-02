@@ -1,10 +1,9 @@
 class Ship
 {
-  float shipHeight;
   
   Ship()
   {
-    this.shipHeight = height / 0.3f;
+    
   }
   
   void render()

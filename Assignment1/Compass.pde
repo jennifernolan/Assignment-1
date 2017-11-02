@@ -27,7 +27,7 @@ class Compass
    this.wx = (width / 6) * 0.2;
    this.wy = (height / 6) * 4.95;
    this.frequency = frequency;
-   this.speed = (QUARTER_PI / 60.0) * frequency;
+   this.speed = (QUARTER_PI / 30.0) * frequency;
    this.theta = 0;
   }
   
@@ -62,18 +62,19 @@ class Compass
           int trailLength = 1;
           for(int i = 0; i < trailLength; i ++)
           {
-            float x = cx + sin(theta + i * speed) * (radius / 5) * 1.5;
-            float y = cy - cos(theta + i * speed) * (radius / 5) * 1.5;
+            float x = cx - sin(theta + i) * (radius / 5) * 1.5;
+            float y = cy + cos(theta + i) * (radius / 5) * 1.5;
             line(cx, cy, x, y);
           }
         }
-        if(keyCode == LEFT) // TRY FIX SO LINE GOES FROM SAME PLACE AS ABOVE (CURRENT GOING FROM EXACTLY THE OTER SIDE OF THE CIRCLE)
+       
+        if(keyCode == LEFT) // TRY FIX SO LINE GOES FROM SAME PLACE AS ABOVE (CURRENTLY GOING FROM EXACTLY THE OTER SIDE OF THE CIRCLE)
         {
           int trailLength = 1;
           for(int i = 0; i < trailLength; i ++)
           {
-            float x = cx - sin(theta - i * speed) * (radius / 5) * 1.5;
-            float y = cy + cos(theta - i * speed) * (radius / 5) * 1.5;
+            float x = cx + sin(theta + i * speed) * (radius / 5) * 1.5;
+            float y = cy + cos(theta + i * speed) * (radius / 5) * 1.5;
             line(cx, cy, x, y);
           }
         }
