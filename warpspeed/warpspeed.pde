@@ -69,6 +69,7 @@ void draw()
   
   radar1.render();
   radar1.update();
+  radar1.keyPressed();
   
   speedometer1.render();
   speedometer1.update();
