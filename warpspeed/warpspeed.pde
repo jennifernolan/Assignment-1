@@ -60,6 +60,7 @@ void draw()
   buttons1.render();
   buttons1.key();
   buttons1.keyPressed();
+  buttons1.keyReleased();
   
   compass1.render();
   compass1.update();

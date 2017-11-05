@@ -44,13 +44,18 @@ class Buttons
     triangle(x + 20, y + 20, x + 35, y + 30, x + 20, y + 40);
     triangle(x, y + 60, x + 10, y + 45, x - 10, y + 45);
     triangle(x  - 20, y + 20, x - 35, y + 30, x - 20, y + 40);
-    
-    //wheel
-    fill(0);
-    arc(wheelx, wheely, width * 0.14, height * 0.14, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
-    fill(85, 107, 47);
-    arc(-width + 350, (height / 8) * 3.05, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
-
+  }
+  
+  //wheel
+  void keyReleased()
+  {
+     if(keyCode != RIGHT && keyCode != LEFT)
+     {
+      fill(0);
+      arc(wheelx, wheely, width * 0.14, height * 0.14, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+      fill(85, 107, 47);
+      arc(-width + 350, (height / 8) * 3.05, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+     }
   }
     
   
@@ -146,6 +151,26 @@ class Buttons
         fill(0);
         textAlign(CENTER);
         text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.25);
+      }
+      
+      if(key == CODED)
+      {
+       if(keyCode == RIGHT)
+       {
+         redraw();
+         fill(0);
+         arc(wheelx, wheely, width * 0.14, height * 0.14, -0.45, 0.95f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+         fill(85, 107, 47);
+         arc(-width + 350, (height / 8) * 3.05, width * 0.11, height * 0.10, -0.45, 0.95f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+        }
+        if(keyCode == LEFT)
+        {
+          redraw();
+          fill(0);
+          arc(wheelx, wheely, width * 0.14, height * 0.14, -0.85, 0.40f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+          fill(85, 107, 47);
+          arc(-width + 350, (height / 8) * 3.05, width * 0.11, height * 0.10, -0.85, 0.40f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+        }
       }
     }
     
