@@ -27,7 +27,7 @@ class Buttons
     noFill();
     rect(accx, accy, width / 7.5, height / 25);
     textAlign(CENTER);
-    text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.25);
+    text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.23);
     
     //Power
     rect(onoffx, onoffy, width / 7.5, height / 25, 7);
@@ -51,6 +51,7 @@ class Buttons
   {
      if(keyCode != RIGHT && keyCode != LEFT)
      {
+      noStroke();
       fill(0);
       arc(wheelx, wheely, width * 0.14, height * 0.14, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
       fill(85, 107, 47);
@@ -140,7 +141,7 @@ class Buttons
         rect(accx, accy, width / 7.5, height / 25);
         fill(255);
         textAlign(CENTER);
-        text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.25);
+        text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.23);
       }
       if(key == 's' || key == 'S')
       {
@@ -150,7 +151,7 @@ class Buttons
         rect(accx, accy, width / 7.5, height / 25);
         fill(0);
         textAlign(CENTER);
-        text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.25);
+        text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.23);
       }
       
       if(key == CODED)
@@ -158,6 +159,7 @@ class Buttons
        if(keyCode == RIGHT)
        {
          redraw();
+         noStroke();
          fill(0);
          arc(wheelx, wheely, width * 0.14, height * 0.14, -0.45, 0.95f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
          fill(85, 107, 47);
@@ -166,6 +168,7 @@ class Buttons
         if(keyCode == LEFT)
         {
           redraw();
+          noStroke();
           fill(0);
           arc(wheelx, wheely, width * 0.14, height * 0.14, -0.85, 0.40f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
           fill(85, 107, 47);

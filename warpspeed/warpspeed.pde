@@ -75,4 +75,5 @@ void draw()
   speedometer1.render();
   speedometer1.update();
   speedometer1.keyPressed();
+  speedometer1.keyReleased();
 }

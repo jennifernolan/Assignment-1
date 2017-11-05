@@ -12,8 +12,8 @@ class Speedometer
   {
    this.cx = -width + 400;
    this.cy = (height / 8) * 1.7;
-   //this.lineX = (width / 6) * 1.7 - 31;
-   //this.lineY = (height / 6) * 4.2 + 15;
+   this.lineX = -width + 370;
+   this.lineY = (height / 8) * 1.7 + 16;
    this.radius = radius;
    this.x = -width + 400;
    this.y = (height / 8) * 1.7;
@@ -49,6 +49,20 @@ class Speedometer
     line(x - radius / 4 + 56, y - 11, x + 30, y - 15);
     line(x + radius / 4, y, x + 25, y);
     line(x - radius / 4 + 58, y + 11, x + 31, y + 15);
+  }
+  
+  void keyReleased()
+  {
+   if(key != 'a' || key != 'A')
+   {
+      stroke(255, 0, 0);
+      line(cx, cy, lineX, lineY);
+   }
+   if(key == 'a' || key == 'A')
+   {
+     stroke(0, 0, 0);
+     line(cx, cy, lineX, lineY);
+   }
   }
   
   void keyPressed()
