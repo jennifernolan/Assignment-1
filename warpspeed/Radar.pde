@@ -234,14 +234,42 @@ class Radar
     {
       if(key == 'a' || key == 'A')
       {
-        if(cy1 == 107)
-        {
-            
-        }
-        else
-        {
-          cy1 --;
-        }
+        if(cy1 == 90)
+          {
+            cx1 = 502;
+            cy1 = 502;
+          }
+          else
+          {
+            cy1 --;
+          }
+          if(cy2 == 91)
+          {
+            cx2 = 502;
+            cy2 = 502;
+          }
+          else
+          {
+            cy2 --;
+          }
+          if(cy3 == 97)
+          {
+            cx3 = 502;
+            cy3 = 502;
+          }
+          else
+          {
+            cy3 --;
+          }
+         if(cy4 == 58)
+          {
+            cx4 = 502;
+            cy4 = 502;
+          }
+          else
+          {
+            cy4 --;
+          }
       }
       if(key == 'f' || key == 'F')
       {
