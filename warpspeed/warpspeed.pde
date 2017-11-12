@@ -28,7 +28,6 @@ Speedometer speedometer1;
 
 void draw()
 {
-  //speed = map(mouseX, 0, width, 0, 20);
   if(keyPressed)
   {
     if(key == 'a' || key == 'A')
