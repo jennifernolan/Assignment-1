@@ -35,7 +35,7 @@ void draw()
     {
       speed = 50;
     }
-    if(key == 's' || key == 'S')
+    if(key == 's' || key == 'S' || key == 'f' || key =='F')
     {
       speed = 0;
     }

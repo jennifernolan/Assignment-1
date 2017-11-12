@@ -80,7 +80,7 @@ class Fuel
          liney = liney + 0.10;
        }
      }
-     if(key == 's' || key == 'S')
+     if(key == 's' || key == 'S' || key == 'o' || key == 'O')
      {
        if(liney > y)
        {

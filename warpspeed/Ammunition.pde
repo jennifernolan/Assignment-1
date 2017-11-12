@@ -80,13 +80,17 @@ class Ammunition
     }
     
   }
+  
     void keyReleased()
     {
-        if(liney > y)
-        {
-          liney = liney - 0.05;
-        }
-      
+      if(key == 'f' || key == 'F')
+      {
+        
+      }
+      else if(liney > y)
+      {
+        liney = liney - 0.05;
+      }
     }
   
 }
