@@ -24,6 +24,19 @@ class Fuel
     vertex(x, y);
     endShape();
     
+    stroke(255);
+    line(x + 3, y + 10, x + 12, y + 10);
+    line(x + 3, y + 20, x + 12, y + 20);
+    line(x + 3, y + 30, x + 12, y + 30);
+    line(x + 3, y + 40, x + 12, y + 40);
+    line(x + 3, y + 50, x + 12, y + 50);
+    line(x + 3, y + 60, x + 12, y + 60);
+    line(x + 3, y + 70, x + 12, y + 70);
+    line(x + 3, y + 80, x + 12, y + 80);
+    line(x + 3, y + 90, x + 12, y + 90);
+    
+    
+    fill(0);
     textAlign(CENTER);
     text("Fuel", x + 10, y + 115);
     

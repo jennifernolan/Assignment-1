@@ -74,7 +74,7 @@ class Compass
             line(cx, cy, x2, y2);
           }
         }
-        else if(keyCode == LEFT) // TRY FIX SO LINE GOES FROM SAME PLACE AS ABOVE (CURRENTLY GOING FROM EXACTLY THE OTHER SIDE OF THE CIRCLE)
+        else if(keyCode == LEFT)
         {
           int trailLength = 1;
           for(int i = 0; i < trailLength; i ++)
@@ -88,6 +88,12 @@ class Compass
             float y2 = cy + cos(theta + i * speed) * (radius / 5) * 1.5;
             line(cx, cy, x2, y2);
           }
+        }
+        else if(keyCode == UP || keyCode == DOWN || keyCode == 0)
+        {
+           line(cx, cy, x, y);
+           stroke(0, 255, 0);
+           line(cx, cy, x2, y2);
         }
       }
     }
