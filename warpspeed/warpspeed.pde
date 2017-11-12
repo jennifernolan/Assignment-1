@@ -11,8 +11,8 @@ void setup()
   buttons1 = new Buttons();
   compass1 = new Compass(100, 0.1);
   fuel1 = new Fuel();
-  radar1 = new Radar(140, 0.5, color(0, 255, 0));
-  speedometer1 = new Speedometer(140, 0.5);
+  radar1 = new Radar(180, 0.5, color(0, 255, 0));
+  speedometer1 = new Speedometer(180, 0.5);
 }
 
 Star[] stars = new Star[1000];

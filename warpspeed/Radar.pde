@@ -123,6 +123,14 @@ class Radar
           cy1 --;
         }
       }
+      if(key == 'f' || key == 'F')
+      {
+        speed = 0;
+      }
+      else
+      {
+        speed = (TWO_PI / 160.0) * frequency;
+      }
     }
           
 }

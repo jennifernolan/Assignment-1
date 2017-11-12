@@ -25,6 +25,7 @@ class Ammunition
     endShape();
     
     textAlign(CENTER);
+    textSize(12);
     text("Ammunition", x + 5, y + 115);
     
     stroke(255, 0, 0);

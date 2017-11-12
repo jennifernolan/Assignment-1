@@ -11,7 +11,7 @@ class Speedometer
   Speedometer(float radius, float frequency)
   {
    this.cx = -width + 400;
-   this.cy = (height / 8) * 1.7;
+   this.cy = (height / 8) * 1.8;
    this.lineX = -width + 370;
    this.lineY = (height / 8) * 1.7 + 16;
    this.radius = radius;
@@ -36,19 +36,38 @@ class Speedometer
     ellipse(cx, cy, radius /2, radius / 2);
     //line(cx, cy, lineX, lineY);
     textAlign(CENTER);
-    text("Speed", -width + 400, (height / 8) * 2.5);
+    text("Speed", -width + 400, (height / 8) * 2.8);
     
     stroke(255);
     fill(255);
-    line(x - radius / 4 + 13, y + 11, x - 31, y + 15);
-    line(x - radius / 4, y, x - 25, y);
-    line(x - radius / 4 + 13, y - 11, x - 31, y - 15);
-    line(x - radius / 4 + 21, y - 19, x - 19, y - 28);
-    line(x, y - radius / 4, x, y - 25);
-    line(x - radius / 4 + 49, y - 21, x + 19, y - 28);
-    line(x - radius / 4 + 56, y - 11, x + 30, y - 15);
-    line(x + radius / 4, y, x + 25, y);
-    line(x - radius / 4 + 58, y + 11, x + 31, y + 15);
+    line(x - radius / 4 + 3, y + 21, x - 31, y + 17);
+    fill(0, 255, 0);
+    textSize(8);
+    text("0", x - 26, y + 20);
+    line(x - radius / 4, y, x - 30, y);
+    fill(0, 255, 0);
+    text("10", x - 24, y + 4);
+    line(x - radius / 4 + 10, y - 21, x - 25, y - 14);
+    fill(0, 255, 0);
+    text("20", x - 18, y - 8);
+    line(x - radius / 4 + 34, y - 24, x - 18, y - 35);
+    fill(0, 255, 0);
+    text("30", x - 11, y - 16);
+    line(x, y - radius / 4 + 7, x, y - 27);
+    fill(0, 255, 0);
+    text("40", x, y - 18);
+    line(x - radius / 4 + 58, y - 24, x + 20, y - 33);
+    fill(0, 255, 0);
+    text("50", x + 11, y - 16);
+    line(x - radius / 4 + 70, y - 14, x + 36, y - 21);
+    fill(0, 255, 0);
+    text("60", x + 18, y - 8);
+    line(x + radius / 4, y, x + 27, y);
+    fill(0, 255, 0);
+    text("70", x + 20, y + 4);
+    line(x - radius / 4 + 86, y + 21, x + 28, y + 17);
+    fill(0, 255, 0);
+     text("80", x + 20, y + 20);
   }
   
   void keyReleased()
