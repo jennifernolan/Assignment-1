@@ -15,7 +15,7 @@ void setup()
   speedometer1 = new Speedometer(180, 0.5);
 }
 
-Star[] stars = new Star[1000];
+Star[] stars = new Star[2000];
 float speed;
 Ship ship1;
 Aimer aimer1;
