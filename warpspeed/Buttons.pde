@@ -27,19 +27,29 @@ class Buttons
     noFill();
     rect(accx, accy, width / 7, height / 25);
     textAlign(CENTER);
+    textSize(12);
+    fill(0);
     text("Accelerator", (width / 30) * 4.3, (height / 8) * 3.23);
     
     //Power
+    stroke(0);
+    noFill();
     rect(onoffx, onoffy, width / 7, height / 25, 7);
     textAlign(CENTER);
+    fill(0);
     text("Power : On", -width + 485, (height / 8) * 3.8);
     
     //shoot
+    stroke(0);
+    noFill();
     rect(shootx, shooty, width / 7.7, height / 25, 7);
     textAlign(CENTER);
+    fill(0);
     text("Shoot", -width + 481, (height / 8) * 1.4);
     
     //buttons to move the shooter and aimer
+    noFill();
+    stroke(0);
     triangle(x, y, x + 10, y + 15, x - 10, y + 15);
     triangle(x + 20, y + 20, x + 35, y + 30, x + 20, y + 40);
     triangle(x, y + 60, x + 10, y + 45, x - 10, y + 45);
@@ -54,7 +64,7 @@ class Buttons
       noStroke();
       fill(0);
       arc(wheelx, wheely, width * 0.14, height * 0.14, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
-      fill(85, 107, 47);
+      fill(70, 82, 22);
       arc(-width + 350, (height / 8) * 3.47, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
      }
   }
@@ -161,7 +171,7 @@ class Buttons
          noStroke();
          fill(0);
          arc(wheelx, wheely, width * 0.14, height * 0.14, -0.45, 0.95f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
-         fill(85, 107, 47);
+         fill(70, 82, 22);
          arc(-width + 350, (height / 8) * 3.47, width * 0.11, height * 0.10, -0.45, 0.95f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
         }
         if(keyCode == LEFT)
@@ -170,7 +180,7 @@ class Buttons
           noStroke();
           fill(0);
           arc(wheelx, wheely, width * 0.14, height * 0.14, -0.85, 0.40f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
-          fill(85, 107, 47);
+          fill(70, 82, 22);
           arc(-width + 350, (height / 8) * 3.47, width * 0.11, height * 0.10, -0.85, 0.40f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
         }
       }

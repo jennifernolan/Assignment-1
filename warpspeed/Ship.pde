@@ -7,8 +7,8 @@ class Ship
   
   void render()
   {
-    stroke(85, 107, 47);
-    fill(85, 107, 47);
+    stroke(70, 82, 22);
+    fill(70, 82, 22);
     
     beginShape();
     vertex(-width, height / 8 * 2);
@@ -25,8 +25,8 @@ class Ship
       if(key == 'o' || key == 'O')
       {
         redraw();
-        stroke(85, 107, 47);
-        fill(85, 107, 47);
+        stroke(70, 82, 22);
+        fill(70, 82, 22);
         
         beginShape();
         vertex(-width, height / 8 * 2);

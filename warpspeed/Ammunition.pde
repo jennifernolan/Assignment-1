@@ -13,6 +13,17 @@ class Ammunition
   
   void render()
   {
+    fill(85, 107, 47);
+    stroke(85, 107, 47);
+  
+    beginShape();
+    vertex(x - 2, y - 2);
+    vertex(x - 2, y + 102);
+    vertex(x + 17, y + 102);
+    vertex(x + 17, y - 2);
+    vertex(x - 2, y - 2);
+    endShape();
+    
     fill(0);
     stroke(0);
   
@@ -34,7 +45,20 @@ class Ammunition
     line(x + 3, y + 70, x + 12, y + 70);
     line(x + 3, y + 80, x + 12, y + 80);
     line(x + 3, y + 90, x + 12, y + 90);
-    
+    textAlign(LEFT);
+    fill(255);
+    textSize(8);
+    text("900", linex - 17, y + 13);
+    text("800", linex - 17, y + 23);
+    text("700", linex - 17, y + 33);
+    text("600", linex - 17, y + 43);
+    text("500", linex - 17, y + 53);
+    text("400", linex - 17, y + 63);
+    text("300", linex - 17, y + 73);
+    text("200", linex - 17, y + 83);
+    text("100", linex - 17, y + 93);
+
+    fill(0);
     textAlign(CENTER);
     textSize(12);
     text("Ammunition", x + 5, y + 115);
@@ -43,7 +67,7 @@ class Ammunition
     line(linex, liney, linex + 15, liney);
     textAlign(LEFT);
     text("Level", linex + 17, liney);
-  
+    
     if(keyPressed)
     {
       if(key == ' ')

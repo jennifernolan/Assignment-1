@@ -28,11 +28,13 @@ class Radar
   
   void render()
   {
-    stroke(255, 0, 0);
+    stroke(85, 107, 47);
+    strokeWeight(2);
     fill(0);
     ellipse(cx, cy, radius / 2, radius / 2);
     
     noStroke();
+    strokeWeight(1);
     fill(255, 255, 0);
     ellipse(cx1 - 17, cy1, radius / 10, radius / 10);
     
@@ -48,7 +50,7 @@ class Radar
     fill(255, 255, 0);
     ellipse(cx1, cy1 + 27, radius / 15, radius / 15);
     
-    int trailLength = 5;
+    int trailLength = 3;
     float redIntensity = 255 / (float)trailLength;
     for(int i = 0; i <trailLength; i ++)
     {

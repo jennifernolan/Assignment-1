@@ -40,11 +40,12 @@ class Compass
   
   void render()
   {
-    stroke(255, 0, 0);
+    stroke(85, 107, 47);
+    strokeWeight(2);
     fill(0);
     ellipse(cx, cy, (radius / 5) * 3, (radius / 5) * 3);
     
-    
+    strokeWeight(1);
     fill(255, 0, 0);
     textAlign(CENTER);
     text("N", nx, ny);
@@ -89,8 +90,9 @@ class Compass
             line(cx, cy, x2, y2);
           }
         }
-        else if(keyCode == UP || keyCode == DOWN || keyCode == 0)
+       else if(keyCode == UP || keyCode == DOWN /*|| keyCode == 0*/)
         {
+           stroke(255, 0, 0);
            line(cx, cy, x, y);
            stroke(0, 255, 0);
            line(cx, cy, x2, y2);
@@ -99,6 +101,7 @@ class Compass
     }
     else
     {
+       stroke(255, 0, 0);
        line(cx, cy, x, y);
        stroke(0, 255, 0);
        line(cx, cy, x2, y2);
