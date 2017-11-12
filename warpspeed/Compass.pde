@@ -1,7 +1,7 @@
 class Compass
 {
   float cx, cy;
-  float x, y;
+  float x, y, x2, y2;
   float radius;
   float nx, ny;
   float ex, ey;
@@ -17,6 +17,8 @@ class Compass
    this.cy = (height / 8) * 2;
    this.x = -width + 330;
    this.y = (height / 8) * 2;
+   this.x2 = -width + 270;
+   this.y2 = (height / 8) * 2;
    this.radius = radius;
    this.nx = -width + 300;
    this.ny = (height / 8) * 1.7;
@@ -41,7 +43,7 @@ class Compass
     stroke(255, 0, 0);
     fill(0);
     ellipse(cx, cy, (radius / 5) * 3, (radius / 5) * 3);
-    //line(cx, cy, x, y);
+    
     
     fill(255, 0, 0);
     textAlign(CENTER);
@@ -62,23 +64,38 @@ class Compass
           int trailLength = 1;
           for(int i = 0; i < trailLength; i ++)
           {
-            float x = cx - sin(theta + i * speed) * (radius / 5) * 1.5;
-            float y = cy + cos(theta + i * speed) * (radius / 5) * 1.5;
+            stroke(255, 0, 0);
+            float x = cx + sin(theta + i * speed) * (radius / 5) * 1.5;
+            float y = cy - cos(theta + i * speed) * (radius / 5) * 1.5;
             line(cx, cy, x, y);
+            stroke(0, 255, 0);
+            float x2 = cx - sin(theta + i * speed) * (radius / 5) * 1.5;
+            float y2 = cy + cos(theta + i * speed) * (radius / 5) * 1.5;
+            line(cx, cy, x2, y2);
           }
         }
-       
-        if(keyCode == LEFT) // TRY FIX SO LINE GOES FROM SAME PLACE AS ABOVE (CURRENTLY GOING FROM EXACTLY THE OTHER SIDE OF THE CIRCLE)
+        else if(keyCode == LEFT) // TRY FIX SO LINE GOES FROM SAME PLACE AS ABOVE (CURRENTLY GOING FROM EXACTLY THE OTHER SIDE OF THE CIRCLE)
         {
           int trailLength = 1;
           for(int i = 0; i < trailLength; i ++)
           {
-            float x = cx + sin(theta + i * speed) * (radius / 5) * 1.5;
-            float y = cy + cos(theta + i * speed) * (radius / 5) * 1.5;
+            stroke(255, 0, 0);
+            float x = cx - sin(theta + i * speed) * (radius / 5) * 1.5;
+            float y = cy - cos(theta + i * speed) * (radius / 5) * 1.5;
             line(cx, cy, x, y);
+            stroke(0, 255, 0);
+            float x2 = cx + sin(theta + i * speed) * (radius / 5) * 1.5;
+            float y2 = cy + cos(theta + i * speed) * (radius / 5) * 1.5;
+            line(cx, cy, x2, y2);
           }
         }
       }
+    }
+    else
+    {
+       line(cx, cy, x, y);
+       stroke(0, 255, 0);
+       line(cx, cy, x2, y2);
     }
   }
 }

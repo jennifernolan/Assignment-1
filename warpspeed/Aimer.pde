@@ -13,6 +13,7 @@ class Aimer
     if(y < height / 8)
     {
       fill(255, 0, 0);
+      textSize(12);
       text("[X]", x, y);
     }
   }
