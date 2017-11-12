@@ -67,7 +67,12 @@ class Speedometer
     text("70", x + 20, y + 4);
     line(x - radius / 4 + 86, y + 21, x + 28, y + 17);
     fill(0, 255, 0);
-     text("80", x + 20, y + 20);
+    text("80", x + 20, y + 20);
+    
+    textAlign(CENTER);
+    fill(255, 0, 0);
+    text("x10", x, y + 30);
+    text("km/h", x, y + 40);
   }
   
   void keyReleased()
@@ -92,8 +97,8 @@ class Speedometer
          for(int i = 0; i < trailLength; i ++)
          {
           stroke(255, 0, 0);
-          float lineX = x + sin(theta + i * speed) * (radius / 5) * 1.3;
-          float lineY = y - cos(theta + i * speed) * (radius / 5) * 1.3;
+          float lineX = cx + sin(theta + i * speed) * radius / 4;
+          float lineY = cy - cos(theta + i * speed) * radius / 4;
           line(cx, cy, lineX, lineY);
          }
        }
