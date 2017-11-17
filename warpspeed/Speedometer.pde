@@ -26,7 +26,6 @@ class Speedometer
   void update()
   {
     theta += speed;
-    theta2 += speed / 2;
   }
   
   void render()
