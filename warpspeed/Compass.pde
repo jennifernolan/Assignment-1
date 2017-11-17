@@ -35,7 +35,14 @@ class Compass
   
   void update()
   {
-    theta += speed;
+    if(keyCode == RIGHT)
+    {
+      theta += speed;
+    }
+    if(keyCode == LEFT)
+    {
+      theta -= speed;
+    }
   }
   
   void render()
@@ -66,12 +73,12 @@ class Compass
           for(int i = 0; i < trailLength; i ++)
           {
             stroke(255, 0, 0);
-            float x = cx + sin(theta + i * speed) * (radius / 5) * 1.5;
-            float y = cy - cos(theta + i * speed) * (radius / 5) * 1.5;
+            float x = cx + sin(theta + i * speed) * (radius / 5) * 1.4;
+            float y = cy - cos(theta + i * speed) * (radius / 5) * 1.4;
             line(cx, cy, x, y);
             stroke(0, 255, 0);
-            float x2 = cx - sin(theta + i * speed) * (radius / 5) * 1.5;
-            float y2 = cy + cos(theta + i * speed) * (radius / 5) * 1.5;
+            float x2 = cx - sin(theta + i * speed) * (radius / 5) * 1.4;
+            float y2 = cy + cos(theta + i * speed) * (radius / 5) * 1.4;
             line(cx, cy, x2, y2);
           }
         }
@@ -81,30 +88,16 @@ class Compass
           for(int i = 0; i < trailLength; i ++)
           {
             stroke(255, 0, 0);
-            float x = cx - sin(theta + i * speed) * (radius / 5) * 1.5;
-            float y = cy - cos(theta + i * speed) * (radius / 5) * 1.5;
+            float x = cx + sin(theta + i * speed) * (radius / 5) * 1.4;
+            float y = cy - cos(theta + i * speed) * (radius / 5) * 1.4;
             line(cx, cy, x, y);
             stroke(0, 255, 0);
-            float x2 = cx + sin(theta + i * speed) * (radius / 5) * 1.5;
-            float y2 = cy + cos(theta + i * speed) * (radius / 5) * 1.5;
+            float x2 = cx - sin(theta + i * speed) * (radius / 5) * 1.4;
+            float y2 = cy + cos(theta + i * speed) * (radius / 5) * 1.4;
             line(cx, cy, x2, y2);
           }
         }
-       else if(keyCode == UP || keyCode == DOWN /*|| keyCode == 0*/)
-        {
-           stroke(255, 0, 0);
-           line(cx, cy, x, y);
-           stroke(0, 255, 0);
-           line(cx, cy, x2, y2);
-        }
       }
-    }
-    else
-    {
-       stroke(255, 0, 0);
-       line(cx, cy, x, y);
-       stroke(0, 255, 0);
-       line(cx, cy, x2, y2);
     }
   }
 }

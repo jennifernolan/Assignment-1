@@ -79,7 +79,7 @@ class Radar
           }
           else
           {
-            cx1 ++;
+            cx1++;
           }
           if(cx2 == 79)
           {

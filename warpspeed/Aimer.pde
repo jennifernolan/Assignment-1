@@ -26,19 +26,19 @@ class Aimer
       {
         if(keyCode == RIGHT && x < width / 2)
         {
-          x ++;
+          x = x + 5;
         }
         if(keyCode == LEFT && x > -width / 2)
         {
-          x --;
+          x = x - 5;
         }
         if(keyCode == UP && y > -height / 2) 
         {
-          y --;
+          y = y - 5;
         }
         if(keyCode == DOWN && y < (height / 8))
         {
-          y ++;
+          y = y + 5;
         }
       }
     } 
