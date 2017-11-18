@@ -45,8 +45,9 @@ class Aimer
     
     if(keyPressed)
     {
-      if(key == ' ')
+      if(key == ' ' && y < height / 8)
       {
+        strokeWeight(4);
         stroke(0, 255, 0);
         line(0, (height / 8), x, y);
       }

@@ -9,7 +9,7 @@ void setup()
   aimer1 = new Aimer();
   ammunition1 = new Ammunition();
   buttons1 = new Buttons();
-  compass1 = new Compass(100, 0.1);
+  compass1 = new Compass(100, 0.3);
   fuel1 = new Fuel();
   radar1 = new Radar(180, 0.5, color(0, 255, 0));
   speedometer1 = new Speedometer(180, 0.5);
@@ -39,7 +39,16 @@ void draw()
       speed = 0;
     }
   }
-  background(0);
+  
+  if(speed == 50)
+  {
+    background(50, 50, 255);
+  }
+  else
+  {
+    background(0);
+  }
+  
   translate(width / 2, height / 2);
   for(int i = 0; i < stars.length; i++)
   {

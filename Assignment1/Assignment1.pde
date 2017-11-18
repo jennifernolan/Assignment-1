@@ -8,7 +8,7 @@ void setup()
   ammunition1 = new Ammunition();
   fuel1 = new Fuel();
   buttons1 = new Buttons();
-  //shooter1 = new Shooter();
+  shooter1 = new Shooter();
   aimer1 = new Aimer();
   for(int i = 0; i < stars.length; i++)
   {
@@ -23,7 +23,7 @@ Compass compass1;
 Ammunition ammunition1;
 Fuel fuel1;
 Buttons buttons1;
-//Shooter shooter1;
+Shooter shooter1;
 Aimer aimer1;
 
 Star[] stars = new Star[1000];
@@ -70,7 +70,7 @@ void draw()
   buttons1.key();
   buttons1.keyPressed();
   
- // shooter1.render();
+  shooter1.render();
   
   aimer1.render();
   aimer1.key();  

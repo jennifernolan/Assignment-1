@@ -13,6 +13,7 @@ class Ammunition
   
   void render()
   {
+    strokeWeight(1);
     fill(85, 107, 47);
     stroke(85, 107, 47);
   
