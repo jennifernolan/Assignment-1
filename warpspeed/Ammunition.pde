@@ -75,7 +75,7 @@ class Ammunition
       {
         if(liney < y + 100)
         {
-          liney = liney + 0.10;
+          liney = liney + 0.5;
         }
       }
     }
