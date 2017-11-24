@@ -1,6 +1,15 @@
+import processing.sound.*;
+
 void setup()
 {
-  size(500, 500);
+  size(500, 500); 
+  
+  sound1 = new SoundFile(this, "shut_off.wav");
+  sound2 = new SoundFile(this, "Accelerate.wav");
+  sound3 = new SoundFile(this, "Power_Up.wav");
+  sound4 = new SoundFile(this, "Robot_blip.wav");
+  sound5 = new SoundFile(this, "LaserBlasts7.wav");
+  
   for(int i = 0; i < stars.length; i++)
   {
     stars[i] = new Star();
@@ -14,6 +23,12 @@ void setup()
   radar1 = new Radar(180, 0.5, color(0, 255, 0));
   speedometer1 = new Speedometer(180, 0.5);
 }
+
+SoundFile sound1;
+SoundFile sound2;
+SoundFile sound3;
+SoundFile sound4;
+SoundFile sound5;
 
 Star[] stars = new Star[2000];
 float speed;
@@ -33,10 +48,23 @@ void draw()
     if(key == 'a' || key == 'A')
     {
       speed = 50;
+      sound2.play();
     }
     if(key == 's' || key == 'S' || key == 'f' || key =='F')
     {
       speed = 0;
+    }
+    if(key == 'f' || key =='F')
+    {
+      sound1.play();
+    }
+    if(key == 'o' || key == 'O')
+    {
+      sound3.play();
+    }
+    if(key == ' ')
+    {
+      sound5.play();
     }
   }
   
@@ -48,6 +76,8 @@ void draw()
   {
     background(0);
   }
+  
+  sound4.loop(0.1f);
   
   translate(width / 2, height / 2);
   for(int i = 0; i < stars.length; i++)

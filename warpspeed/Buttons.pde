@@ -1,11 +1,11 @@
 class Buttons
-{
+{  
   float accx, accy;
   float onoffx, onoffy;
   float shootx, shooty;
   float x, y;
   float wheelx, wheely;
-  
+
   Buttons()
   {
     this.accx = (width / 30) * 2;
@@ -185,5 +185,4 @@ class Buttons
         }
       }
     }
-    
 }
