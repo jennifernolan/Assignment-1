@@ -1,31 +1,83 @@
-class Shooter
+class Shooter extends Aimer
 {
-  float x, y;
-  
-  Shooter()
+  float sx, sy;
+
+  Shooter(float x, float y)
   {
-    this.x = (width / 6) * 2.95;
-    this.y = (height / 6) * 2;
+    super(x, y);
+    this.sx = (width / 6) * 2.95;
+    this.sy = (height / 6) * 3.62;
   }
-  
+
   void render()
   {
     stroke(85, 107, 47);
     fill(85, 107, 47);
-    rect(x, y, 10, 140);
-    rect(x - 5, y, 20, 20);
-    
-    if(keyPressed)
+    rect(sx, sy, 10, -140);
+    //rect(x - 5, y, 20, 20);
+    stroke(255, 0, 0);
+    point(sx, sy);
+  }
+
+  void update()
+  {
+    if (keyPressed)
     {
-      if(keyCode == RIGHT && x + 15 < width)
+      if (keyCode == RIGHT)
       {
-        x ++;
+        sx ++;
       }
-      if(keyCode == LEFT && x - 5 > 0)
+      if (keyCode == LEFT)
       {
-        x --;
+        sx --;
+      }
+      if(key == ' ')
+      {
+        stroke(0, 255, 0);
+        line(x, sy - 140, x, y);
       }
     }
+    if(keyPressed)
+    {
+      if(key == CODED)
+      {
+        if(keyCode == RIGHT && x < width)
+        {
+          x ++;
+        }
+        if(keyCode == LEFT && x > 0)
+        {
+          x --;
+        }
+        if(keyCode == UP && y > 0) 
+        {
+          y --;
+        }
+        if(keyCode == DOWN && y < (height / 6) * 3)
+        {
+          y ++;
+        }
+      }
+    }
+     if(keyCode == LEFT /*&& x > -width / 2*/)
+        {
+          x = x - 5;
+          if(x < -width / 2)
+          {
+            x = width / 2;
+          }
+        }
+        if(keyCode == UP && y > -height / 2) 
+        {
+          y = y - 5;
+        }
+        if(keyCode == DOWN && y < (height / 8))
+        {
+          y = y + 5;
+        }
+        if(keyCode == RIGHT && x > width/2)
+        {
+          x = -width / 2;
+        }
   }
-  
 }

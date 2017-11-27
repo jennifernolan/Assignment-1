@@ -8,8 +8,8 @@ void setup()
   ammunition1 = new Ammunition();
   fuel1 = new Fuel();
   buttons1 = new Buttons();
-  shooter1 = new Shooter();
-  aimer1 = new Aimer();
+  shooter1 = new Shooter((width / 6) * 3, (height/6 * 3));
+  aimer1 = new Aimer((width / 6) * 3, (height/6 * 3));
   for(int i = 0; i < stars.length; i++)
   {
     stars[i] = new Star();
@@ -71,6 +71,7 @@ void draw()
   buttons1.keyPressed();
   
   shooter1.render();
+  shooter1.update();
   
   aimer1.render();
   aimer1.key();  

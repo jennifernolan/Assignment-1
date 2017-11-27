@@ -30,6 +30,7 @@ class Star
   {
     fill(255);
     noStroke();
+    strokeWeight(2);
     
     float sx = map(x / z, 0, 1, 0, width);
     float sy = map(y / z, 0, 1, 0, height);

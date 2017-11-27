@@ -2,7 +2,7 @@ class Aimer
 {
   float x, y;
   
-  Aimer()
+  Aimer(float x, float y)
   {
     this.x = (width / 6) * 3;
     this.y = (height / 6) * 1;
@@ -42,14 +42,14 @@ class Aimer
       }
     } 
     
-    if(keyPressed)
+    /*if(keyPressed)
     {
       if(key == ' ')
       {
         stroke(0, 255, 0);
         line((width / 6) * 3, (height / 6) * 3.6, x, y);
       }
-    }
+    }*/
   }
   
 }

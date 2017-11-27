@@ -12,10 +12,10 @@ class Ship
    fill(85, 107, 47);
    
    beginShape();
-   vertex(0, (height / 5) * 4);
+   vertex(0, (height / 5) * 3);
    vertex((width / 5) * 1, (height / 5) * 3);
    vertex((width / 5) * 4, (height / 5) * 3);
-   vertex(width, (height / 5) * 4);
+   vertex(width, (height / 5) * 3);
    vertex(width, height);
    vertex(0, height);
    endShape();

@@ -5,7 +5,7 @@ class Aimer
   Aimer()
   {
     this.x = 0;
-    this.y = 0;
+    this.y = -height / 2 * 0.5;
   }
   
   void render()
@@ -47,10 +47,6 @@ class Aimer
         if(keyCode == DOWN && y < (height / 8))
         {
           y = y + 5;
-        }
-        if(keyCode == RIGHT && x > width/2)
-        {
-          x = -width / 2;
         }
       }
     } 
