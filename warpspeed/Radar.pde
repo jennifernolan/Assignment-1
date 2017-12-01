@@ -152,81 +152,26 @@ class Radar
         
         if(keyCode == UP)
         {
-          if(cy1 == 90)
-          {
-            cx1 = 502;
-            cy1 = 502;
-          }
-          else
-          {
-            cy1 --;
-          }
-          if(cy2 == 91)
-          {
-            cx2 = 502;
-            cy2 = 502;
-          }
-          else
-          {
-            cy2 --;
-          }
-          if(cy3 == 97)
-          {
-            cx3 = 502;
-            cy3 = 502;
-          }
-          else
+          //top most circle
+          if(cy3 >= 97)
           {
             cy3 --;
-          }
-         if(cy4 == 58)
-          {
-            cx4 = 502;
-            cy4 = 502;
-          }
-          else
-          {
+            cy1 --;
+            cy2 --;
             cy4 --;
           }
+
         }
         
+        //bottom most circle
         if(keyCode == DOWN)
         {
-          if(cy1 == 161)
-          {
-            cx1 = 502;
-            cy1 = 502;
-          }
-          else
-          {
-            cy1 ++;
-          }
-          if(cy2 == 160)
-          {
-            cx2 = 502;
-            cy2 = 502;
-          }
-          else
-          {
-            cy2 ++;
-          }
-          if(cy3 == 180)
-          {
-            cx3 = 502;
-            cy3 = 502;
-          }
-          else
+          if(cy4 <= 136)
           {
             cy3 ++;
-          }
-          if(cy4 == 136)
-          {
-            cx4 = 502;
-            cy4 = 502;
-          }
-          else
-          {
             cy4 ++;
+            cy2 ++;
+            cy1 ++;
           }
         }
       }
