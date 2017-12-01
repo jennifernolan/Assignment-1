@@ -109,6 +109,7 @@ class Radar
            cx4 ++;
           }
         }
+        
         if(keyCode == LEFT)
         {
           if(cx1 == 46.0)
@@ -148,6 +149,7 @@ class Radar
             cx4 --;
           }
         }
+        
         if(keyCode == UP)
         {
           if(cy1 == 90)
@@ -187,6 +189,7 @@ class Radar
             cy4 --;
           }
         }
+        
         if(keyCode == DOWN)
         {
           if(cy1 == 161)

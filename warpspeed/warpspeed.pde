@@ -52,6 +52,10 @@ void draw()
     }
     if(key == 's' || key == 'S' || key == 'f' || key =='F')
     {
+      /*for(int i = 1; i < speed; i ++)
+      {
+        speed = speed - i;
+      }*/
       speed = 0;
     }
     if(key == 'f' || key =='F')
