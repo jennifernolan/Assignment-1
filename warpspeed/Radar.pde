@@ -57,10 +57,10 @@ class Radar
     ellipse(cx4, cy4 + 27, radius / 15, radius / 15);
     
     int trailLength = 3;
-    float redIntensity = 255 / (float)trailLength;
+    float greenIntensity = 255 / (float)trailLength;
     for(int i = 0; i <trailLength; i ++)
     {
-      stroke(0, i * redIntensity, 0);
+      stroke(0, i * greenIntensity, 0);
       float x = cx + sin(theta + i * speed) * radius / 4;
       float y = cy - cos(theta + i * speed) * radius / 4;
       line(cx, cy, x, y);
