@@ -75,7 +75,7 @@ class Radar
           if(cx1 == 120.0)
           {
            cx1 = 502;
-           cy1 = 502;
+           //cy1 = 502;
           }
           else
           {
@@ -84,7 +84,7 @@ class Radar
           if(cx2 == 79)
           {
            cx2 = 502;
-           cy2 = 502;
+           //cy2 = 502;
           }
           else
           {
@@ -93,7 +93,7 @@ class Radar
           if(cx3 == 103)
           {
            cx3 = 502;
-           cy3 = 502;
+           //cy3 = 502;
           }
           else
           {
@@ -102,11 +102,27 @@ class Radar
           if(cx4 == 104)
           {
            cx4 = 502;
-           cy4 = 502;
+           //cy4 = 502;
           }
           else
           {
            cx4 ++;
+          }
+          if(cx1 == 502)
+          { 
+            cx1 = 40.0;
+          }
+          if(cx2 == 502)
+          {
+            cx2 = -7;
+          }
+          if(cx3 == 502)
+          {
+            cx3 = 20.0;
+          }
+          if(cx4 == 502)
+          {
+            cx4 = 23.0;
           }
         }
         
@@ -115,7 +131,7 @@ class Radar
           if(cx1 == 46.0)
           {
             cx1 = 502;
-            cy1 = 502;
+            //cy1 = 502;
           }
           else
           {
@@ -124,7 +140,7 @@ class Radar
           if(cx2 == -7)
           {
             cx2 = 502;
-            cy2 = 502;
+           // cy2 = 502;
           }
           else
           {
@@ -133,7 +149,7 @@ class Radar
           if(cx3 == 20.0)
           {
             cx3 = 502;
-            cy3 = 502;
+           // cy3 = 502;
           }
           else
           {
@@ -142,18 +158,34 @@ class Radar
           if(cx4 == 28.0)
           {
             cx4 = 502;
-            cy4 = 502;
+            //cy4 = 502;
           }
           else
           {
             cx4 --;
+          }
+          if(cx1 == 502)
+          { 
+            cx1 = 120.0;
+          }
+          if(cx2 == 502)
+          {
+            cx2 = 79;
+          }
+          if(cx3 == 502)
+          {
+            cx3 = 103;
+          }
+          if(cx4 == 502)
+          {
+            cx4 = 104;
           }
         }
         
         if(keyCode == UP)
         {
           //top most circle
-          if(cy3 >= 97)
+          if(cy3 >= 97 && cy3 < 502)
           {
             cy3 --;
             cy1 --;
@@ -166,7 +198,7 @@ class Radar
         //bottom most circle
         if(keyCode == DOWN)
         {
-          if(cy4 <= 136)
+          if(cy4 <= 136 && cy4 < 502)
           {
             cy3 ++;
             cy4 ++;
