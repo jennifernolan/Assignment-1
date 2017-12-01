@@ -185,7 +185,7 @@ class Radar
         if(keyCode == UP)
         {
           //top most circle
-          if(cy3 >= 97 && cy3 < 502)
+          if(cy3 >= 97 && cy3 < 502 && cy3 > 502)
           {
             cy3 --;
             cy1 --;
@@ -198,7 +198,7 @@ class Radar
         //bottom most circle
         if(keyCode == DOWN)
         {
-          if(cy4 <= 136 && cy4 < 502)
+          if(cy4 <= 136 && cy4 < 502 && cy4 > 502)
           {
             cy3 ++;
             cy4 ++;

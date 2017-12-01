@@ -80,7 +80,7 @@ class Fuel
          liney = liney + 0.10;
        }
      }
-     if(key == 's' || key == 'S' || key == 'o' || key == 'O' || key != 'a' || key == 'A')
+     if(key == 's' || key == 'S' || key == 'o' || key == 'O' || keyCode == LEFT || keyCode == RIGHT || keyCode == UP || keyCode == DOWN)
      {
        if(liney > y)
        {
