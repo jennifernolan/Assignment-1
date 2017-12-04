@@ -183,31 +183,28 @@ class Radar
         }
         
         if(keyCode == UP)
-        {
-          //top most circle
-          if(cy3 >= 97 && cy3 < 502 && cy3 > 502)
-          {
-            cy3 --;
-            cy1 --;
-            cy2 --;
-            cy4 --;
-          }
-
-        }
-        
-        //bottom most circle
-        if(keyCode == DOWN)
-        {
-          if(cy4 <= 136 && cy4 < 502 && cy4 > 502)
-          {
-            cy3 ++;
-            cy4 ++;
-            cy2 ++;
-            cy1 ++;
-          }
-        }
-      }
-    }
+         {
+           if(cy3 >= 97 && cy4 <=502)
+           {
+             cy1--;
+             cy2--;
+             cy3--;
+             cy4--;
+           }
+         }
+         
+         if(keyCode == DOWN)
+         {
+           if(cy4 <= 136)
+           {
+             cy1++;
+             cy2++;
+             cy3++;
+             cy4++;
+           }
+         }
+       }
+     }
     }
     
     void keyPressed()
