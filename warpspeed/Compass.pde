@@ -35,10 +35,12 @@ class Compass
   
   void update()
   {
+    //if right key pressed then turn the line clockwise
     if(keyCode == RIGHT)
     {
       theta += speed;
     }
+    //if left key pressed then turn the line anti-clockwise
     if(keyCode == LEFT)
     {
       theta -= speed;
@@ -52,6 +54,7 @@ class Compass
     fill(0);
     ellipse(cx, cy, (radius / 5) * 3, (radius / 5) * 3);
     
+    //position the compass coordinates
     strokeWeight(1);
     fill(255, 0, 0);
     textAlign(CENTER);
@@ -67,6 +70,7 @@ class Compass
     {
       if(key == CODED)
       {
+        //when the right key is pressed turn the two lines clockwise on the compass
         if(keyCode == RIGHT)
         {
           int trailLength = 1;
@@ -82,6 +86,7 @@ class Compass
             line(cx, cy, x2, y2);
           }
         }
+        //when the left key is pressed turn the two lines clockwise on the compass
         else if(keyCode == LEFT)
         {
           int trailLength = 1;
