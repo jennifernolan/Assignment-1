@@ -8,6 +8,7 @@ class Aimer
     this.y = -height / 2 * 0.5;
   }
   
+  //while the aimer is not underneath the ship
   void render()
   {
     if(y < height / 8)
@@ -22,11 +23,13 @@ class Aimer
   {
     if(keyPressed)
     {
+      //movement of aimer up, down, left and right
       if(key == CODED)
       {
         if(keyCode == RIGHT /*&& x < width / 2*/)
         {
           x = x + 5;
+          //make the aimer wrap around the screen
           if(x > width/2)
           {
             x = -width / 2;
@@ -35,6 +38,7 @@ class Aimer
         if(keyCode == LEFT /*&& x > -width / 2*/)
         {
           x = x - 5;
+          //make the aimer wrap around the screen
           if(x < -width / 2)
           {
             x = width / 2;
@@ -53,6 +57,7 @@ class Aimer
     
     if(keyPressed)
     {
+      //when the space key is used to shoot a line / laser goes from the ship to the aimers position on the screen
       if(key == ' ' && y < height / 8)
       {
         strokeWeight(4);
