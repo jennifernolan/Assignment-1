@@ -17,6 +17,7 @@ class Ammunition
     fill(85, 107, 47);
     stroke(85, 107, 47);
   
+    //outline of the ammunition in a lighter colour than rest of ship for shading
     beginShape();
     vertex(x - 2, y - 2);
     vertex(x - 2, y + 102);
@@ -28,6 +29,7 @@ class Ammunition
     fill(0);
     stroke(0);
   
+    //rectangle for the ammunition bar
     beginShape();
     vertex(x, y);
     vertex(x, y + 100);
@@ -36,6 +38,7 @@ class Ammunition
     vertex(x, y);
     endShape();
     
+    //lines marking amount left
     stroke(255);
     line(x + 3, y + 10, x + 12, y + 10);
     line(x + 3, y + 20, x + 12, y + 20);
@@ -71,6 +74,7 @@ class Ammunition
     
     if(keyPressed)
     {
+      //when the laser is shot the level goes down by the same amount each time
       if(key == ' ')
       {
         if(liney < y + 100)
@@ -84,10 +88,12 @@ class Ammunition
   
     void keyReleased()
     {
+      //when f is pressed the line is stopped from moving as if the ship is really off
       if(key == 'f' || key == 'F')
       {
         
       }
+      //while the line is not at the top of the rectangle keep moving the level back up
       else if(liney > y)
       {
         liney = liney - 0.05;
