@@ -12,6 +12,7 @@ class Radar
   {
    this.cx = width / 30 * 4;
    this.cy = (height / 8) * 2;
+   //smaller circles within the radars coordinates
    this.cx1 = width / 30 * 4;
    this.cy1 = (height / 8) * 2;
    this.cx2 = width / 30 * 4;
@@ -39,6 +40,7 @@ class Radar
     fill(0);
     ellipse(cx, cy, radius / 2, radius / 2);
     
+    //drawing the smaller circles
     noStroke();
     strokeWeight(1);
     fill(255, 255, 0);
@@ -56,6 +58,7 @@ class Radar
     fill(255, 255, 0);
     ellipse(cx4, cy4 + 27, radius / 15, radius / 15);
     
+    //radar continues to move around
     int trailLength = 3;
     float greenIntensity = 255 / (float)trailLength;
     for(int i = 0; i <trailLength; i ++)
@@ -70,6 +73,7 @@ class Radar
     {
       if(key == CODED)
       {
+        //move the minature circles around in the radar
         if(keyCode == RIGHT)
         {
           if(cx1 == 120.0)
@@ -108,6 +112,7 @@ class Radar
           {
            cx4 ++;
           }
+          //get the small circles to wrap around like the aimer
           if(cx1 == 502)
           { 
             cx1 = 40.0;
@@ -128,6 +133,7 @@ class Radar
         
         if(keyCode == LEFT)
         {
+          //move the minature circles around in the radar
           if(cx1 == 46.0)
           {
             cx1 = 502;
@@ -164,6 +170,7 @@ class Radar
           {
             cx4 --;
           }
+          //get the small circles to wrap around like the aimer
           if(cx1 == 502)
           { 
             cx1 = 120.0;
@@ -184,6 +191,7 @@ class Radar
         
         if(keyCode == UP)
          {
+           //if the aimer is moving up get the circles to stay on the radar and stop at the edge
            if(cy3 >= 97 && cy4 <=502)
            {
              cy1--;
@@ -195,6 +203,7 @@ class Radar
          
          if(keyCode == DOWN)
          {
+           //if the aimer is moving down get the circles to stay on the radar and stop at the edge
            if(cy4 <= 136)
            {
              cy1++;
@@ -209,6 +218,7 @@ class Radar
     
     void keyPressed()
     {
+      //when accelerating the circles move up the radar and disappear off screen
       if(key == 'a' || key == 'A')
       {
         if(cy1 == 90)
@@ -248,6 +258,7 @@ class Radar
             cy4 --;
           }
       }
+      //when the ship is powered off the radar stops spinning
       if(key == 'f' || key == 'F')
       {
         speed = 0;
