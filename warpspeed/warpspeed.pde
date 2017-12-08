@@ -88,7 +88,7 @@ void draw()
   //background noise of space
   sound4.loop(0.1f);
   
-  //display the stars onto the screen
+  //display the stars onto the screen from the center of the screen out 
   translate(width / 2, height / 2);
   for(int i = 0; i < stars.length; i++)
   {
