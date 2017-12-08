@@ -16,6 +16,7 @@ class Fuel
     fill(85, 107, 47);
     stroke(85, 107, 47);
   
+    //outline of the fuel in a lighter colour than rest of ship for shading
     beginShape();
     vertex(x - 2, y - 2);
     vertex(x - 2, y + 102);
@@ -27,6 +28,7 @@ class Fuel
     fill(0);
     stroke(0);
   
+    //rectangle shape of the fuel
     beginShape();
     vertex(x, y);
     vertex(x, y + 100);
@@ -35,6 +37,7 @@ class Fuel
     vertex(x, y);
     endShape();
     
+    //lines to mark the amount of fuel used
     stroke(255);
     line(x + 3, y + 10, x + 12, y + 10);
     line(x + 3, y + 20, x + 12, y + 20);
@@ -73,6 +76,7 @@ class Fuel
   
     void keyPressed()
     {
+     //when the ship is accelerated the fuel level goes down
      if(key == 'a' || key == 'A')
      {
        if(liney < y + 100)
@@ -80,6 +84,7 @@ class Fuel
          liney = liney + 0.10;
        }
      }
+     //when the accelerator is stopped, the ship is turned back on or the aimer is moved the fuel level will rise gradually
      if(key == 's' || key == 'S' || key == 'o' || key == 'O' || keyCode == LEFT || keyCode == RIGHT || keyCode == UP || keyCode == DOWN)
      {
        if(liney > y)
