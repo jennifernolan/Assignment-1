@@ -4,12 +4,14 @@ void setup()
 {
   size(500, 500); 
   
+  //Loud the sundfiles 
   sound1 = new SoundFile(this, "shut_off.wav");
   sound2 = new SoundFile(this, "Accelerate.wav");
   sound3 = new SoundFile(this, "Power_Up.wav");
   sound4 = new SoundFile(this, "Robot_blip.wav");
   sound5 = new SoundFile(this, "LaserBlasts7.wav");
   
+  //Iterate over the stars array to create a new star
   for(int i = 0; i < stars.length; i++)
   {
     stars[i] = new Star();
@@ -45,29 +47,35 @@ void draw()
 {
   if(keyPressed)
   {
+    //when accelerating speed makes the stars move and a sound is played
     if(key == 'a' || key == 'A')
     {
       speed = 50;
       sound2.play();
     }
+    //when stopping the speed is set back to zero
     if(key == 's' || key == 'S' || key == 'f' || key =='F')
     {
       speed = 0;
     }
+    //power off sound
     if(key == 'f' || key =='F')
     {
       sound1.play();
     }
+    //power on sound
     if(key == 'o' || key == 'O')
     {
       sound3.play();
     }
+    //laser shooting sound
     if(key == ' ')
     {
       sound5.play();
     }
   }
   
+  //when accelerating change the background colour to look like warpspeed otherwise just a black background
   if(speed == 50)
   {
     background(50, 50, 255);
@@ -77,8 +85,10 @@ void draw()
     background(0);
   }
   
+  //background noise of space
   sound4.loop(0.1f);
   
+  //display the stars onto the screen
   translate(width / 2, height / 2);
   for(int i = 0; i < stars.length; i++)
   {
@@ -86,6 +96,7 @@ void draw()
     stars[i].show();
   }
   
+  //display all other class methods to the screen
   ship1.render();
   ship1.keyPressed();
   
