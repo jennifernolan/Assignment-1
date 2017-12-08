@@ -8,6 +8,7 @@ class Buttons
 
   Buttons()
   {
+    //each buttons individual coordinates
     this.accx = (width / 30) * 2;
     this.accy = (height / 8) * 3;
     this.onoffx = -width + 450;
@@ -59,6 +60,7 @@ class Buttons
   //wheel
   void keyReleased()
   {
+    //when the left or right key aren't pressed then the wheel does not move
      if(keyCode != RIGHT && keyCode != LEFT)
      {
       noStroke();
@@ -74,6 +76,7 @@ class Buttons
   {
     if(keyPressed)
     {
+      //when the spacebar is pressed to shoot the shoot button is filled 
       if(key == ' ')
       {
         redraw();
@@ -89,6 +92,7 @@ class Buttons
     {
       if(key == CODED)
       {
+        //when one of the directional keys are pressed the corresponding triangle is filled
         if(keyCode == RIGHT)
         {
           redraw();
@@ -119,6 +123,7 @@ class Buttons
     
   void keyPressed()
     {
+      //when the ship is powered on change the button back to the original format
       if(key == 'o' || key == 'O')
       {
         redraw();
@@ -131,6 +136,7 @@ class Buttons
         fill(85, 107, 47);
         arc(-width + 350, (height / 8) * 3.47, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
       }
+      //when the ship is powered off change the button to be filled 
       if(key == 'f' || key == 'F')
       {
         redraw();
@@ -139,12 +145,13 @@ class Buttons
         fill(255);
         textAlign(CENTER);
         text("Power : Off", -width + 485, (height / 8) * 3.8);
-        fill(0, 51, 0);
-        arc(-width + 350, (height / 8) * 3.47, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
+        //fill(0, 51, 0);
+        //arc(-width + 350, (height / 8) * 3.47, width * 0.11, height * 0.10, -0.75, 0.7f + QUARTER_PI + HALF_PI + QUARTER_PI, PIE);
       }
       
       if(key == 'a' || key == 'A')
       {
+        //fill the accelerator button when pressed and keep filled until stopped
         redraw();
         fill(0);
         rect(accx, accy, width / 7, height / 25);
@@ -154,6 +161,7 @@ class Buttons
       }
       if(key == 's' || key == 'S')
       {
+        //when the accelrator is stopped change the button back to original
         redraw();
         noFill();
         stroke(0);
@@ -165,6 +173,7 @@ class Buttons
       
       if(key == CODED)
       {
+        //when keys right or left pressed turn the wheel in the corresponding direction
        if(keyCode == RIGHT)
        {
          redraw();
