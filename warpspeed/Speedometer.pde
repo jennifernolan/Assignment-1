@@ -39,6 +39,7 @@ class Speedometer
     textAlign(CENTER);
     text("Speed", -width + 400, (height / 8) * 2.8);
     
+    //lines for various speeds of the speedometer
     stroke(255);
     fill(255);
     line(x - radius / 4 + 3, y + 21, x - 31, y + 17);
@@ -78,11 +79,13 @@ class Speedometer
   
   void keyReleased()
   {
+    //when not accelerating then don't have the speedometer move
    if(key != 'a' || key != 'A')
    {
       stroke(255, 0, 0);
       line(cx, cy, lineX, lineY);
    }
+   //when accelerating have the speedometer turn rapidly 
    if(key == 'a' || key == 'A')
    {
      stroke(0, 0, 0);
@@ -92,6 +95,7 @@ class Speedometer
   
   void keyPressed()
   {
+    //when accelerating have the speedometer turn rapidly 
        if(key == 'a' || key == 'A')
        {
          int trailLength = 1;
